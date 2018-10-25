@@ -60,8 +60,8 @@ post '/enable' do
       halt 422, PLAIN_TEXT, "params missing or unvalid\n"
     end
     
-    haproxy.enable(params[:backend], params[:server])
-    halt 200, PLAIN_TEXT, "backend of server was enables\n"
+    haproxy.enable(params[:server],params[:backend])
+    halt 200, PLAIN_TEXT, "backend of server was enabled\n"
     
   rescue Exception => e
     logger.warn "[haproxy-api Rescue: #{e.message}"
