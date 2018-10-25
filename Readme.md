@@ -27,7 +27,7 @@ chown www:www log
 Create an `APP_TOKEN` in the `.env` file:
 
 ```
-ruby -e 'require "digest/sha1";puts "APP_TOKEN=#{Digest::SHA2.hexdigest((Random.rand*10000000000000000).to_s)}";' > .env
+ruby -e 'require "digest/sha1";puts "APP_TOKEN=#{Digest::SHA2.hexdigest((Random.rand).to_s)}";' > .env
 ```
 
 And start the application:
