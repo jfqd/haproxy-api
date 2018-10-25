@@ -1,0 +1,11 @@
+.DS_Store
+Capfile
+config/deploy.rb
+config/crontab
+.rvmrc
+.env*
+log/*.log
+doc
+tmp
+.bundle
+.rsync_cache
