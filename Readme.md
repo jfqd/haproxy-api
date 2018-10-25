@@ -21,6 +21,7 @@ cd /usr/local/var
 git clone https://github.com/jfqd/haproxy-api.git
 cd haproxy-api
 bundle
+chown www:www log
 ```
 
 Create an `APP_TOKEN` in the `.env` file:
@@ -32,7 +33,7 @@ ruby -e 'require "digest/sha1";puts "APP_TOKEN=#{Digest::SHA2.hexdigest((Random.
 And start the application:
 
 ```
-su www -c 'cd /usr/local/var/haproxy-api; rackup -p 9292 -D'
+su -m www -c 'cd /usr/local/var/haproxy-api; rackup -p 9292 -D'
 ```
 
 ## Usage
