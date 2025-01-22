@@ -17,7 +17,7 @@ gem install bundler
 Install the application:
 
 ```
-cd /usr/local/var
+cd /usr/local/scr
 git clone https://github.com/jfqd/haproxy-api.git
 cd haproxy-api
 chown www:www /usr/local/var/haproxy-api/log/
@@ -33,7 +33,7 @@ ruby -e 'require "digest/sha1";puts "APP_TOKEN=#{Digest::SHA2.hexdigest((Random.
 And start the application:
 
 ```
-su -m www -c 'cd /usr/local/var/haproxy-api; rackup -p 9292 -D -E production -o 127.0.0.1'
+su -m www -c 'cd /usr/local/scr/haproxy-api; rackup -p 9292 -D -E production -o 127.0.0.1'
 rackup -p 9292 -D -E production -o 127.0.0.1
 ```
 
